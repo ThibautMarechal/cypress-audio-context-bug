@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function handleClick() {
+      console.log('Creating audio context...');
+      document.body.innerText = "Creating audio context...";
+      const ctx = new AudioContext()
+      ctx.audioWorklet.addModule('./audio-worklet-module.js').then(() => document.body.innerText = "Loaded").catch(e => document.body.innerText = "Failed")
+    }
+  </script>
+  
+  </head>
+  <body>
+    <button type="button" onclick="handleClick();">Load</button>
+  </body>
+</html>

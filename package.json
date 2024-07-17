@@ -1,0 +1,14 @@
+{
+  "name": "cypress-audio-context-bug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Thibaut Maréchal",
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "^13.13.1"
+  },
+  "scripts": {
+    "start": "npx serve app",
+    "test": "npx cross-env DEBUG=cypress:* cypress run"
+  }
+}
